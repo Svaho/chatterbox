@@ -1,38 +1,126 @@
+body {
+  margin: 0px;
+  background-image: url(https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/Desktop.png);
+  background-size: 1920px 1080px;
+  
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+ 
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  opacity: 0.3;
+  overflow: visible;
+  width: 100%;
+  text-align: center;
+  color: #eee;
+  font-family:'Times New Roman', Times, serif;
+ 
+}
+.App-header:hover {
+  opacity: 1;
+}
+
+
+.Messages-list {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  padding-left: 0;
+  padding-right: 2px;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.Messages-message {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.Messages-message.currentMember {
+  flex-direction: row-reverse;
+  text-align: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Message-content {
+  display: inline-block;
+}
+
+.currentMember > .Message-content {
+  align-items: flex-end;
+}
+
+.Messages-message > .slikica {
+  margin: 5px;
+  height: 60px;
+  width: 60px;
+  align-self: auto;
+  border-radius: 50%;
+  display: inline-block;
+  background-image: url(https://cryptopotato.com/wp-content/uploads/2022/01/Neymar-NFT-laser-eyes.png);
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+
+}
+
+.Message-content > .username {
+
+  color: #eee;
+  font-size: 14px;
+}
+
+.Message-content > .text {
+  padding: 10px;
+  max-width: 350px;
+  margin: 0;
+  border-radius: 4px;
+  background-color: #92a8d1;
+  color: black;
+  display: inline-block;
+}
+
+.currentMember > .Message-content .text {
+  background-color: cornflowerblue;
+
+}
+
+form {
+  display: flex;
+  width: 94%;
+  justify-content: space-between;
+  max-width: 875px;
+  margin: 0 auto 40px;
+}
+
+input {
+  font-size: 20px;
+  border-radius: 2px;
+  border: 1px solid cornflowerblue;
+  flex-grow: 1;
+  background-color: #ccc;
+}
+input:focus {
+  background-color: #eee;
+}
+
+button {
+  padding: 7px 10px;
+  text-align:justify; 
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: cornflowerblue;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 2px;
+  margin-left: 8px;
+}
+button:active{
+  background-color: #6687c4;
+  box-shadow: 0 2px #666;
+  transform: translateY();
 }
